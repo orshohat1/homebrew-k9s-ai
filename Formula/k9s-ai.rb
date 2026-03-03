@@ -11,7 +11,7 @@ class K9sAi < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/orshohat1/k9s-ai/releases/download/v0.1.0/k9s-ai_Darwin_amd64.tar.gz"
-      sha256 "51aa983a087a09f7707f00399017e3c8bbd53965e0762393904a1075824b4e53"
+      sha256 "730ce9697668d891a7763394df0158a175884296317fa4683ccc3a1a6f7bfb95"
 
       define_method(:install) do
         bin.install "k9s-ai"
@@ -20,7 +20,7 @@ class K9sAi < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/orshohat1/k9s-ai/releases/download/v0.1.0/k9s-ai_Darwin_arm64.tar.gz"
-      sha256 "fd65268a09f52ba950d4c2d5ffccca7af8e8cfcd35fe030718a70de1e2546fbc"
+      sha256 "7cc970e56e2f6eb17a45a0de7f1f668f66ea14e88d95be194399968a2f3c60e2"
 
       define_method(:install) do
         bin.install "k9s-ai"
@@ -32,7 +32,7 @@ class K9sAi < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/orshohat1/k9s-ai/releases/download/v0.1.0/k9s-ai_Linux_amd64.tar.gz"
-      sha256 "a44de22936b8b73e39a83e0bb4715bbf501242b2a94014b5c26f995273c756ef"
+      sha256 "9cee100a17f8572aef215483489bd6bbc0496dfb502f523320682109de034875"
       define_method(:install) do
         bin.install "k9s-ai"
         generate_completions_from_executable(bin/"k9s-ai", "completion")
@@ -40,7 +40,7 @@ class K9sAi < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/orshohat1/k9s-ai/releases/download/v0.1.0/k9s-ai_Linux_arm64.tar.gz"
-      sha256 "712f94c7e5ab3cfea4428dbe38a333ebdd5a5c9b00ff6be5845c8ff83cf0544a"
+      sha256 "497c6115d55e6beddbc9c1d6327f5f96189c18fc624643140f8858fd8fbcb1c9"
       define_method(:install) do
         bin.install "k9s-ai"
         generate_completions_from_executable(bin/"k9s-ai", "completion")
