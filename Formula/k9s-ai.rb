@@ -5,13 +5,13 @@
 class K9sAi < Formula
   desc "K9s AI — Kubernetes CLI with built-in AI/Copilot assistant"
   homepage "https://github.com/orshohat1/k9s-ai"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orshohat1/k9s-ai/releases/download/v0.1.0/k9s-ai_Darwin_amd64.tar.gz"
-      sha256 "39c2beeb7911369f8199440279d7ba7a2255eedde5ec38b1a51529ba942dec5a"
+      url "https://github.com/orshohat1/k9s-ai/releases/download/v0.1.1/k9s-ai_Darwin_amd64.tar.gz"
+      sha256 "078474f1926d5b123990defbbfc1a58894adf364ace208a3564ccd47787f1820"
 
       define_method(:install) do
         bin.install "k9s-ai"
@@ -19,8 +19,8 @@ class K9sAi < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orshohat1/k9s-ai/releases/download/v0.1.0/k9s-ai_Darwin_arm64.tar.gz"
-      sha256 "e365a7aea0398435e052138ac9bcb6fe3a02e16c7e784ca7dee687bd410cad21"
+      url "https://github.com/orshohat1/k9s-ai/releases/download/v0.1.1/k9s-ai_Darwin_arm64.tar.gz"
+      sha256 "b468e0b60ff0647445364b9ad6182770441380f02e74e90328cfec37c318bedf"
 
       define_method(:install) do
         bin.install "k9s-ai"
@@ -31,16 +31,16 @@ class K9sAi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orshohat1/k9s-ai/releases/download/v0.1.0/k9s-ai_Linux_amd64.tar.gz"
-      sha256 "d88061717085651bd5e71f4d62e6df393cec0ed509d1510b1677c8fed3aeaad4"
+      url "https://github.com/orshohat1/k9s-ai/releases/download/v0.1.1/k9s-ai_Linux_amd64.tar.gz"
+      sha256 "cbd459bdec8acaf9f4961afc2accf364295a4bd182f18d7f6486381e0c37aa08"
       define_method(:install) do
         bin.install "k9s-ai"
         generate_completions_from_executable(bin/"k9s-ai", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orshohat1/k9s-ai/releases/download/v0.1.0/k9s-ai_Linux_arm64.tar.gz"
-      sha256 "57fa3d7ca792f173af071c458156c7d95241c5b10dd1802b2546ce8e393961a3"
+      url "https://github.com/orshohat1/k9s-ai/releases/download/v0.1.1/k9s-ai_Linux_arm64.tar.gz"
+      sha256 "c7caba4c2f89b517a44545e3daf0db4df381fced29c301b758171045c4e64df6"
       define_method(:install) do
         bin.install "k9s-ai"
         generate_completions_from_executable(bin/"k9s-ai", "completion")
